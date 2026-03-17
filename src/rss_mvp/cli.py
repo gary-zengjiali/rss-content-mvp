@@ -7,6 +7,7 @@ from .db import fetch_items_by_date, init_db, upsert_items
 from .digest import build_digest, build_topics, write_digest_files, write_topics_files
 from .enrich import enrich_rows
 from .fetcher import parse_feed
+from .healthcheck import build_health_report, write_health_report
 from .sync import sync_to_github, sync_to_obsidian
 
 
@@ -84,6 +85,13 @@ def command_sync(args):
         print(f"GitHub sync: {result}")
 
 
+def command_healthcheck(_args):
+    report = build_health_report()
+    paths = write_health_report(report)
+    print(f"Healthcheck written: {paths['markdown']} | {paths['json']}")
+    print(f"Summary: {report['summary']}")
+
+
 def command_run_daily(args):
     date_str = resolve_date(args.date)
     command_fetch(args)
@@ -99,6 +107,10 @@ def command_run_daily(args):
             print(f"Obsidian sync: {sync_to_obsidian(date_str)}")
         if args.sync_target in ("github", "all"):
             print(f"GitHub sync: {sync_to_github(date_str)}")
+    if args.healthcheck:
+        report = build_health_report()
+        paths = write_health_report(report)
+        print(f"Healthcheck written: {paths['markdown']} | {paths['json']}")
     print(f"Daily run complete. digest={digest_paths['markdown']} topics={topic_paths['markdown']}")
 
 
@@ -130,10 +142,14 @@ def build_parser():
     sync_parser.add_argument("--target", choices=["github", "obsidian", "all"], default="all")
     sync_parser.set_defaults(func=command_sync)
 
+    health_parser = sub.add_parser("healthcheck")
+    health_parser.set_defaults(func=command_healthcheck)
+
     run_daily_parser = sub.add_parser("run-daily")
     run_daily_parser.add_argument("--date", help="YYYY-MM-DD")
     run_daily_parser.add_argument("--enrich-limit", type=int, default=20, help="daily 流程里最大正文抽取条数")
     run_daily_parser.add_argument("--sync-target", choices=["none", "github", "obsidian", "all"], default="none")
+    run_daily_parser.add_argument("--healthcheck", action="store_true")
     run_daily_parser.set_defaults(func=command_run_daily)
 
     return parser

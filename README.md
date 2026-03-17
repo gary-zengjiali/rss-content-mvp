@@ -83,7 +83,8 @@ python -m rss_mvp.cli digest --date YYYY-MM-DD
 python -m rss_mvp.cli enrich --date YYYY-MM-DD --limit 20
 python -m rss_mvp.cli topics --date YYYY-MM-DD
 python -m rss_mvp.cli sync --date YYYY-MM-DD --target all
-python -m rss_mvp.cli run-daily --sync-target all
+python -m rss_mvp.cli healthcheck
+python -m rss_mvp.cli run-daily --sync-target all --healthcheck
 ```
 
 ## 同步配置说明
@@ -157,9 +158,24 @@ sources:
 ./run.sh run-daily --date YYYY-MM-DD --enrich-limit 20
 ```
 
+## RSS 源健康检查
+
+你可以运行：
+
+```bash
+./run.sh healthcheck
+```
+
+会输出：
+- `data/health/source-health-report.md`
+- `data/health/source-health-report.json`
+
+用于查看：
+- 哪些源完全没抓到数据
+- 哪些源最近很久没更新
+- 哪些源连续多次没有今日新条目
+
 ## 后续扩展
 
 - 接 LLM 摘要/改写
-- GitHub 自动提交
-- Obsidian 同步
 - Web Dashboard
