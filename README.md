@@ -84,7 +84,8 @@ python -m rss_mvp.cli enrich --date YYYY-MM-DD --limit 20
 python -m rss_mvp.cli topics --date YYYY-MM-DD
 python -m rss_mvp.cli sync --date YYYY-MM-DD --target all
 python -m rss_mvp.cli healthcheck
-python -m rss_mvp.cli run-daily --sync-target all --healthcheck
+python -m rss_mvp.cli content --date YYYY-MM-DD --limit 15
+python -m rss_mvp.cli run-daily --sync-target all --healthcheck --generate-content --brief-limit 15
 ```
 
 ## 同步配置说明
@@ -157,6 +158,24 @@ sources:
 # 或一键
 ./run.sh run-daily --date YYYY-MM-DD --enrich-limit 20
 ```
+
+## WhatsApp 简报 / 视频脚本 / PPT 大纲
+
+你可以运行：
+
+```bash
+./run.sh content --date YYYY-MM-DD --limit 15
+```
+
+会生成：
+- `output/content/YYYY-MM-DD-whatsapp-brief.md`
+- `output/content/YYYY-MM-DD-video-script.md`
+- `output/content/YYYY-MM-DD-ppt-outline.md`
+
+用途：
+- WhatsApp 每日简报（15 条）
+- 给 Gemini 的短视频脚本素材
+- 给 Gemini 的 PPT 大纲素材
 
 ## RSS 源健康检查
 

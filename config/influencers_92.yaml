@@ -1,0 +1,68 @@
+profiles:
+  - id: sam_altman
+    name: Sam Altman
+    category: founder
+    sources:
+      - type: blog
+        url: https://blog.samaltman.com/
+      - type: rss
+        url: https://blog.samaltman.com/posts.atom
+  - id: simon_willison
+    name: Simon Willison
+    category: builder
+    sources:
+      - type: rss
+        url: https://simonwillison.net/atom/everything/
+  - id: andrej_karpathy
+    name: Andrej Karpathy
+    category: researcher
+    sources:
+      - type: website
+        url: https://karpathy.ai/
+  - id: sebastian_raschka
+    name: Sebastian Raschka
+    category: researcher
+    sources:
+      - type: rss
+        url: https://sebastianraschka.com/rss.xml
+  - id: chip_huyen
+    name: Chip Huyen
+    category: researcher
+    sources:
+      - type: rss
+        url: https://huyenchip.com/feed.xml
+  - id: lilian_weng
+    name: Lilian Weng
+    category: researcher
+    sources:
+      - type: blog
+        url: https://lilianweng.github.io/
+  - id: ethan_mollick
+    name: Ethan Mollick
+    category: analyst
+    sources:
+      - type: rss
+        url: https://www.oneusefulthing.org/feed/
+  - id: latent_space
+    name: Latent Space
+    category: newsletter
+    sources:
+      - type: rss
+        url: https://www.latent.space/feed
+  - id: ben_tossell
+    name: Ben Tossell
+    category: newsletter
+    sources:
+      - type: rss
+        url: https://www.bensbites.com/feed
+  - id: semianalysis
+    name: SemiAnalysis
+    category: analyst
+    sources:
+      - type: rss
+        url: https://semianalysis.com/feed/
+
+# 占位扩展到 92 个配置槽位，方便你后续继续补真人名单
+meta:
+  target_profile_count: 92
+  strategy: "Use compliant public sources only: RSS, blog, newsletter, GitHub, papers, official websites. No unauthorized scraping."

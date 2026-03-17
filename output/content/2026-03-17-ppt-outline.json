@@ -1,0 +1,69 @@
+{
+  "date": "2026-03-17",
+  "title": "AI 今日 PPT 大纲 2026-03-17",
+  "slides": [
+    {
+      "slide": 1,
+      "title": "AI 今日资讯简报 - 2026-03-17",
+      "bullets": [
+        "15 条精选资讯",
+        "覆盖模型、工程、产品、商业动态",
+        "适合晨会/自媒体选题"
+      ]
+    },
+    {
+      "slide": 2,
+      "title": "[AINews] NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sales backlog in 2027",
+      "bullets": [
+        "来源：Latent Space",
+        "摘要：It is NVIDIA GTC day again, and over his signature 2hr unrehearsed keynote , Je…",
+        "建议：可延展成快讯、解读或案例拆解"
+      ]
+    },
+    {
+      "slide": 3,
+      "title": "Bank built its own threat hunting agent because vendors can’t keep pace with new threats",
+      "bullets": [
+        "来源：The Register AI",
+        "摘要：AI helped send weekly threat signal count from 80 million to 400 billion, then…",
+        "建议：可延展成快讯、解读或案例拆解"
+      ]
+    },
+    {
+      "slide": 4,
+      "title": "QCon London 2026: Behind Booking.com's AI Evolution: The Unpolished Story",
+      "bullets": [
+        "来源：InfoQ AI/ML",
+        "摘要：Jabez Eliezer Manuel, Senior Principal Engineer at Booking.com, presented “Behi…",
+        "建议：可延展成快讯、解读或案例拆解"
+      ]
+    },
+    {
+      "slide": 5,
+      "title": "Gartner suggests Friday afternoon Copilot ban because tired users may be too lazy to check its mistakes",
+      "bullets": [
+        "来源：The Register AI",
+        "摘要：Admins may be even more exhausted by then, because securing Microsoft’s AI help…",
+        "建议：可延展成快讯、解读或案例拆解"
+      ]
+    },
+    {
+      "slide": 6,
+      "title": "AI still doesn't work very well, businesses are faking it, and a reckoning is coming",
+      "bullets": [
+        "来源：The Register AI",
+        "摘要：Codestrap founders say we need to dial down the hype and sort through the mess…",
+        "建议：可延展成快讯、解读或案例拆解"
+      ]
+    },
+    {
+      "slide": 7,
+      "title": "今日可跟进方向",
+      "bullets": [
+        "继续跟踪高热度模型更新",
+        "挑 1-2 条做深度内容",
+        "同步到视频/PPT/公众号选题池"
+      ]
+    }
+  ]
+}

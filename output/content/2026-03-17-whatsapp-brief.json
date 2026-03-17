@@ -1,0 +1,47 @@
+{
+  "date": "2026-03-17",
+  "count": 5,
+  "entries": [
+    {
+      "rank": 1,
+      "title": "[AINews] NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sales backlog in 2027",
+      "source": "Latent Space",
+      "summary_80": "It is NVIDIA GTC day again, and over his signature 2hr unrehearsed keynote , Je…",
+      "link": "https://www.latent.space/p/ainews-nvidia-gtc-jensen-goes-hard",
+      "score": 58
+    },
+    {
+      "rank": 2,
+      "title": "Bank built its own threat hunting agent because vendors can’t keep pace with new threats",
+      "source": "The Register AI",
+      "summary_80": "AI helped send weekly threat signal count from 80 million to 400 billion, then…",
+      "link": "https://go.theregister.com/feed/www.theregister.com/2026/03/17/commonwealth_bank_ai_defense/",
+      "score": 10
+    },
+    {
+      "rank": 3,
+      "title": "QCon London 2026: Behind Booking.com's AI Evolution: The Unpolished Story",
+      "source": "InfoQ AI/ML",
+      "summary_80": "Jabez Eliezer Manuel, Senior Principal Engineer at Booking.com, presented “Behi…",
+      "link": "https://www.infoq.com/news/2026/03/booking-evolution-ai-manuel/",
+      "score": 9
+    },
+    {
+      "rank": 4,
+      "title": "Gartner suggests Friday afternoon Copilot ban because tired users may be too lazy to check its mistakes",
+      "source": "The Register AI",
+      "summary_80": "Admins may be even more exhausted by then, because securing Microsoft’s AI help…",
+      "link": "https://go.theregister.com/feed/www.theregister.com/2026/03/17/gartner_copilot_security_mitigations/",
+      "score": 7
+    },
+    {
+      "rank": 5,
+      "title": "AI still doesn't work very well, businesses are faking it, and a reckoning is coming",
+      "source": "The Register AI",
+      "summary_80": "Codestrap founders say we need to dial down the hype and sort through the mess…",
+      "link": "https://go.theregister.com/feed/www.theregister.com/2026/03/17/ai_businesses_faking_it_reckoning_coming_codestrap/",
+      "score": 7
+    }
+  ],
+  "whatsapp_text": "AI 今日简报｜2026-03-17\n\n1. [AINews] NVIDIA GTC: Jensen goes hard on OpenClaw, Vera CPU, and announces $1T sales backlog in 2027\n来源：Latent Space\n摘要：It is NVIDIA GTC day again, and over his signature 2hr unrehearsed keynote , Je…\n链接：https://www.latent.space/p/ainews-nvidia-gtc-jensen-goes-hard\n\n2. Bank built its own threat hunting agent because vendors can’t keep pace with new threats\n来源：The Register AI\n摘要：AI helped send weekly threat signal count from 80 million to 400 billion, then…\n链接：https://go.theregister.com/feed/www.theregister.com/2026/03/17/commonwealth_bank_ai_defense/\n\n3. QCon London 2026: Behind Booking.com's AI Evolution: The Unpolished Story\n来源：InfoQ AI/ML\n摘要：Jabez Eliezer Manuel, Senior Principal Engineer at Booking.com, presented “Behi…\n链接：https://www.infoq.com/news/2026/03/booking-evolution-ai-manuel/\n\n4. Gartner suggests Friday afternoon Copilot ban because tired users may be too lazy to check its mistakes\n来源：The Register AI\n摘要：Admins may be even more exhausted by then, because securing Microsoft’s AI help…\n链接：https://go.theregister.com/feed/www.theregister.com/2026/03/17/gartner_copilot_security_mitigations/\n\n5. AI still doesn't work very well, businesses are faking it, and a reckoning is coming\n来源：The Register AI\n摘要：Codestrap founders say we need to dial down the hype and sort through the mess…\n链接：https://go.theregister.com/feed/www.theregister.com/2026/03/17/ai_businesses_faking_it_reckoning_coming_codestrap/"
+}

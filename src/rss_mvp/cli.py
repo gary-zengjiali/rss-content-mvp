@@ -4,6 +4,7 @@ from typing import Optional
 
 from .config import ensure_dirs, load_sources, load_topic_config
 from .db import fetch_items_by_date, init_db, upsert_items
+from .contentgen import build_ppt_outline, build_video_script, build_whatsapp_brief, write_content_outputs
 from .digest import build_digest, build_topics, write_digest_files, write_topics_files
 from .enrich import enrich_rows
 from .fetcher import parse_feed
@@ -92,6 +93,16 @@ def command_healthcheck(_args):
     print(f"Summary: {report['summary']}")
 
 
+def command_content(args):
+    date_str = resolve_date(args.date)
+    rows = fetch_items_by_date(date_str)
+    brief = build_whatsapp_brief(date_str, rows, load_topic_config(), source_meta_map(), limit=args.limit)
+    video = build_video_script(date_str, brief)
+    ppt = build_ppt_outline(date_str, brief)
+    paths = write_content_outputs(date_str, brief, video, ppt)
+    print(f"Content written: {paths}")
+
+
 def command_run_daily(args):
     date_str = resolve_date(args.date)
     command_fetch(args)
@@ -102,6 +113,13 @@ def command_run_daily(args):
     digest_paths = write_digest_files(date_str, digest)
     topics = build_topics(date_str, digest_rows, load_topic_config(), source_meta_map())
     topic_paths = write_topics_files(date_str, topics)
+    content_paths = None
+    if args.generate_content:
+        brief = build_whatsapp_brief(date_str, digest_rows, load_topic_config(), source_meta_map(), limit=args.brief_limit)
+        video = build_video_script(date_str, brief)
+        ppt = build_ppt_outline(date_str, brief)
+        content_paths = write_content_outputs(date_str, brief, video, ppt)
+        print(f"Content written: {content_paths}")
     if args.sync_target != "none":
         if args.sync_target in ("obsidian", "all"):
             print(f"Obsidian sync: {sync_to_obsidian(date_str)}")
@@ -111,7 +129,7 @@ def command_run_daily(args):
         report = build_health_report()
         paths = write_health_report(report)
         print(f"Healthcheck written: {paths['markdown']} | {paths['json']}")
-    print(f"Daily run complete. digest={digest_paths['markdown']} topics={topic_paths['markdown']}")
+    print(f"Daily run complete. digest={digest_paths['markdown']} topics={topic_paths['markdown']} content={content_paths}")
 
 
 def build_parser():
@@ -145,11 +163,18 @@ def build_parser():
     health_parser = sub.add_parser("healthcheck")
     health_parser.set_defaults(func=command_healthcheck)
 
+    content_parser = sub.add_parser("content")
+    content_parser.add_argument("--date", help="YYYY-MM-DD")
+    content_parser.add_argument("--limit", type=int, default=15, help="WhatsApp 简报条数")
+    content_parser.set_defaults(func=command_content)
+
     run_daily_parser = sub.add_parser("run-daily")
     run_daily_parser.add_argument("--date", help="YYYY-MM-DD")
     run_daily_parser.add_argument("--enrich-limit", type=int, default=20, help="daily 流程里最大正文抽取条数")
     run_daily_parser.add_argument("--sync-target", choices=["none", "github", "obsidian", "all"], default="none")
     run_daily_parser.add_argument("--healthcheck", action="store_true")
+    run_daily_parser.add_argument("--generate-content", action="store_true")
+    run_daily_parser.add_argument("--brief-limit", type=int, default=15)
     run_daily_parser.set_defaults(func=command_run_daily)
 
     return parser
