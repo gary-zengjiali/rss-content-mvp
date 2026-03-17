@@ -1,0 +1,210 @@
+sources:
+  - id: openai_blog
+    name: OpenAI Blog
+    url: https://openai.com/blog/rss.xml
+    category: ai-research
+    enabled: true
+    priority: 10
+
+  - id: anthropic_news
+    name: Anthropic News
+    url: https://www.anthropic.com/news/rss.xml
+    category: ai-research
+    enabled: true
+    priority: 10
+
+  - id: google_deepmind_blog
+    name: Google DeepMind Blog
+    url: https://deepmind.google/blog/rss.xml
+    category: ai-research
+    enabled: true
+    priority: 10
+
+  - id: huggingface_blog
+    name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    category: ai-tooling
+    enabled: true
+    priority: 9
+
+  - id: mistral_news
+    name: Mistral News
+    url: https://mistral.ai/news/rss.xml
+    category: ai-research
+    enabled: true
+    priority: 9
+
+  - id: aws_ml_blog
+    name: AWS Machine Learning Blog
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+    category: ai-engineering
+    enabled: true
+    priority: 8
+
+  - id: google_cloud_blog
+    name: Google Cloud Blog
+    url: https://cloudblog.withgoogle.com/rss/
+    category: ai-engineering
+    enabled: true
+    priority: 8
+
+  - id: microsoft_research_blog
+    name: Microsoft Research Blog
+    url: https://www.microsoft.com/en-us/research/feed/
+    category: ai-research
+    enabled: true
+    priority: 8
+
+  - id: langchain_blog
+    name: LangChain Blog
+    url: https://blog.langchain.dev/rss/
+    category: ai-engineering
+    enabled: true
+    priority: 8
+
+  - id: llamaindex_blog
+    name: LlamaIndex Blog
+    url: https://www.llamaindex.ai/blog/rss.xml
+    category: ai-engineering
+    enabled: true
+    priority: 8
+
+  - id: vercel_blog
+    name: Vercel Blog
+    url: https://vercel.com/blog/rss.xml
+    category: ai-engineering
+    enabled: true
+    priority: 7
+
+  - id: cloudflare_blog
+    name: Cloudflare Blog
+    url: https://blog.cloudflare.com/rss/
+    category: infra
+    enabled: true
+    priority: 7
+
+  - id: stripe_blog
+    name: Stripe Blog
+    url: https://stripe.com/blog/feed.rss
+    category: product
+    enabled: true
+    priority: 6
+
+  - id: netflix_techblog
+    name: Netflix TechBlog
+    url: https://netflixtechblog.com/feed
+    category: engineering-practice
+    enabled: true
+    priority: 7
+
+  - id: uber_engineering
+    name: Uber Engineering
+    url: https://www.uber.com/blog/engineering/rss/
+    category: engineering-practice
+    enabled: true
+    priority: 6
+
+  - id: instacart_blog
+    name: Instacart Engineering
+    url: https://tech.instacart.com/feed
+    category: engineering-practice
+    enabled: true
+    priority: 5
+
+  - id: infoq_ai
+    name: InfoQ AI/ML
+    url: https://feed.infoq.com/ai-ml-data-eng/
+    category: ai-news
+    enabled: true
+    priority: 7
+
+  - id: the_register_ai
+    name: The Register AI
+    url: https://www.theregister.com/software/ai_ml/headlines.atom
+    category: ai-news
+    enabled: true
+    priority: 5
+
+  - id: venturebeat_ai
+    name: VentureBeat AI
+    url: https://venturebeat.com/category/ai/feed/
+    category: ai-news
+    enabled: true
+    priority: 6
+
+  - id: mit_tech_review_ai
+    name: MIT Tech Review AI
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed/
+    category: ai-news
+    enabled: true
+    priority: 7
+
+  - id: ben_tossell
+    name: Ben's Bites / Ben Tossell
+    url: https://www.bensbites.com/feed
+    category: ai-newsletter
+    enabled: true
+    priority: 5
+
+  - id: latent_space
+    name: Latent Space
+    url: https://www.latent.space/feed
+    category: ai-newsletter
+    enabled: true
+    priority: 6
+
+  - id: simon_willison
+    name: Simon Willison's Weblog
+    url: https://simonwillison.net/atom/everything/
+    category: ai-engineering
+    enabled: true
+    priority: 8
+
+  - id: one_useful_thing
+    name: One Useful Thing
+    url: https://www.oneusefulthing.org/feed/
+    category: ai-analysis
+    enabled: true
+    priority: 7
+
+  - id: semianalysis
+    name: SemiAnalysis
+    url: https://semianalysis.com/feed/
+    category: ai-analysis
+    enabled: true
+    priority: 7
+
+  - id: towardsdatascience
+    name: Towards Data Science
+    url: https://towardsdatascience.com/feed
+    category: ai-practice
+    enabled: true
+    priority: 5
+
+  - id: pytorch_blog
+    name: PyTorch Blog
+    url: https://pytorch.org/feed.xml
+    category: ai-tooling
+    enabled: true
+    priority: 7
+
+  - id: tensorflow_blog
+    name: TensorFlow Blog
+    url: https://blog.tensorflow.org/feeds/posts/default
+    category: ai-tooling
+    enabled: true
+    priority: 6
+
+  - id: redis_blog
+    name: Redis Blog
+    url: https://redis.io/blog/rss/
+    category: infra
+    enabled: true
+    priority: 5
+
+  - id: mongodb_blog
+    name: MongoDB Blog
+    url: https://www.mongodb.com/blog/rss
+    category: infra
+    enabled: true
+    priority: 5

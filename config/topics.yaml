@@ -1,0 +1,35 @@
+topic_keywords:
+  ai-agents:
+    - agent
+    - agents
+    - autonomous
+    - workflow
+    - orchestration
+  llm-infra:
+    - inference
+    - latency
+    - serving
+    - vector
+    - rag
+    - embedding
+  product-updates:
+    - release
+    - launched
+    - introducing
+    - update
+    - available
+  engineering-practice:
+    - benchmark
+    - eval
+    - testing
+    - safety
+    - deployment
+
+boost_keywords:
+  - gpt
+  - claude
+  - openai
+  - anthropic
+  - gemini
+  - llama
+  - deepseek

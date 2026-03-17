@@ -1,0 +1,14 @@
+github:
+  enabled: true
+  repo_path: /Users/gary/.openclaw/workspace/rss-content-mvp
+  branch: main
+  remote: origin
+  auto_push: true
+  commit_message_template: "chore(rss): sync daily outputs for {date}"
+
+obsidian:
+  enabled: true
+  vault_path: /Users/gary/Documents/Obsidian Vault
+  target_subdir: RSS-Daily
+  mirror_daily: true
+  mirror_topics: true
